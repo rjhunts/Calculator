@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    #1e293b,
+    #020617
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calculator shell */
+.calculator {
+  width: 340px;
+  background: linear-gradient(180deg, #000000, #000000);
+  border-radius: 20px;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Display */
+.display {
+  padding: 24px;
+  text-align: right;
+  background: linear-gradient(
+    180deg,
+    #020617,
+    #020617cc
+  );
+}
+
+.display .previous {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.display .current {
+  margin-top: 6px;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Base button */
+button {
+  border: none;
+  padding: 22px;
+  font-size: 1.1rem;
+  background: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.05s ease;
+}
+
+button:hover {
+  background: #020617cc;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Number buttons */
+.number {
+  background: linear-gradient(180deg, #020617, #020617dd);
+  color: #f1f5f9;
+}
+
+.number:hover {
+  background: linear-gradient(180deg, #020513, #020617);
+}
+
+/* Equals */
+.equals {
+  background: linear-gradient(180deg, #22c55e, #16a34a);
+  color: #022c22;
+  font-weight: 700;
+}
+
+.equals:hover {
+  background: linear-gradient(180deg, #4ade80, #22c55e);
+}
+
+/* Clear */
+.clear {
+  background: linear-gradient(180deg, #ef4444, #dc2626);
+  color: #020617;
+  font-weight: 700;
+}
+
+.clear:hover {
+  background: linear-gradient(180deg, #f87171, #ef4444);
+}
+
+/* Spans */
+.span-2 {
+  grid-column: span 2;
+}
+
+.utility.sign {
+  color: #e0e7ff;
+}
+
